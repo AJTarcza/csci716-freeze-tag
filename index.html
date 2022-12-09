@@ -1,18 +1,78 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<h1>Freeze-Tag: Optimal Strategies for Awakening a Swarm of Robots</h1>
-		<p>Andrew Tarcza</p>
-	</head>
-	<body>
-		<h2>Problem Description</h2>
-		<p>An open optimization problem of how to awaken a set of “asleep” robots, by having an awakened robot move to their locations and activating them.</br> The problem starts with a single awakened robot, but as more and more robots become awakened, they are able to assist in activating other robots as well which leads to a cascading effect. The overall objective of the problem is to minimize the time it takes for the final robot to activate.</p>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    
+    <div class="header">
+			<!-- Github Button -->
+			<span class="github" alt="Source Code" title="View Source Code">
+				<a href="https://github.com/AJTarcza/csci716-freeze-tag" target="_blank"><i class="fa fa-github"></i></a>
+			</span>
+			<!-- End Github Button -->
+			
+			<h1>Freeze-Tag: Optimal Strategies for Awakening a Swarm of Robots</h1>
+			<p>Andrew Tarcza</p>
+    </div>
+	<hr>
+    
+  </head>
+  <body>
+    <div class="info">
+    <h2>Problem Description</h2>
+		<p>An open optimization problem of how to awaken a set of “asleep” robots, by having an awakened robot move to their locations and activating them.</p>
+    
+        <p>The problem starts with a single awakened robot, but as more and more robots become awakened, they are able to assist in activating other robots as well which leads to a cascading effect. The overall objective of the problem is to minimize the time it takes for the final robot to activate.</p>
+      
+      <h2>Why it's useful</h2>
+		<p>In addition to the more obvious practicality of real world robotic routing, the Freeze-Tag problem is also a great example of a networked information dissemination exercise. For example, in cases where physical proximity is required for data transmission (due to bandwidth cost or security), solutions to the Freeze-Tag Problem will determine the most efficient ways to spread the data to all the necessary parties.</p>
+      
+      <h2>Other Approaches</h2>
+		<p>Since this problem is in essence a graph dissemination problem, however the requirement of physical proximity to activate nodes provides a unique aspect to the issue that affects the performance of any algorithms used on it. Because of this, the problem has been approached in many unique ways ranging from basic graph and tree traversal to genetic algorithm.</p>
+      
+      <h2>My Approach</h2>
+		<p>I decided to approach this problem in more a naive way where each robot simply searches for its closest neighbor and activates that robot. While this sounds efficient in theory, in practice the act of searching for the closest neighbor is fairly costly and slows down the algorithm.</p>
 		
 		<h2>Resources</h2>
 		<a href="https://www3.cs.stonybrook.edu/~bender/newpub/ArkinBeFe06-freezetag.pdf" target="_blank">The Freeze-Tag Problem: How to Wake Up a Swarm of Robots</a>
 		<br/>
 		<a href="http://www.acsij.org/acsij/article/viewFile/61/57" target="_blank">Linear time constant factor approximation algorithm for the Euclidean “Freeze-Tag” robot awakening problem</a>
+      
+      <h2>Presentation Video</h2>
+      <a href="https://youtu.be/YfhJBuw39rE" target="_blank">Link</a>
 		<br/>
-		<a href="http://ijsart.com/Content/PDFDocuments/IJSARTV3I917345.pdf" target="_blank">Solving Freeze Tag Problem In Swarm Robotics Using Genetic Algorithm And Dijikstra’s Algorithm</a>
-	</body>
+    </div>
+	
+	<hr>
+    
+    <div class="container" id="contentContainer">
+      <div class="leftCol" id="leftCol">
+		  <span class="p5Content" id="p5ContentContainer">
+			  <div id="sketch">
+				  <main>
+				  </main>
+			  </div>
+			  <hr>
+			  <div id="controlBar"></div>
+		  </span>
+      </div>
+	  <div class="rightCol">
+		  <pre>
+			<code><span id="pseudo"></span></code>
+		  </pre>
+	  </div>
+	  <br style="clear:both;"/>
+    </div>
+    
+    
+    <script src="scripts/sketch.js"></script>
+    <script src="scripts/controls.js"></script>
+    <script src="scripts/algorithm.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/makespan.js"></script>
+    <script src="scripts/shortedge.js"></script>
+    <script src="scripts/robot.js"></script>
+  </body>
 </html>

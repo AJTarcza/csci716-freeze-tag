@@ -1,0 +1,109 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #e7c9a9;
+}
+canvas {
+  display: block;
+}
+
+.header {
+	background-size: 100% 100%;
+}
+
+.github {
+	position: absolute;
+	left: 1vw;
+	cursor: pointer;
+	font-size: 3vw;
+}
+
+.fa-github {
+	color: black;
+}
+
+pre {
+  background: #BBB;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  color: #000;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-top: 0;
+  max-width: 90%;
+  overflow: auto;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  display: block;
+  word-wrap: break-word;
+  min-height: 600px;
+  
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+pre p {
+  width: fit-content;
+}
+
+#sketch {
+  position: relative;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+.control {
+  color: black;
+}
+
+#controlBar {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+
+#controlBar .button {
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+#controlBar .slider {
+	margin: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.leftCol {
+	width: 50%;
+	float: left;
+}
+
+.rightCol {
+	width: 50%;
+	float: right;
+}
+
+select {
+  width: fit-content;
+  text-align: center;
+}
